@@ -40,6 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        drawer: Drawer(),
         body: NestedScrollView(
           headerSliverBuilder: (BuildContext context, bool isScrolled) {
             return [
@@ -61,8 +62,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               Center(
                                 child: CircleAvatar(
                                   radius: 30,
-                                  backgroundImage: NetworkImage(
-                                    'https://images.pexels.com/photos/14394351/pexels-photo-14394351.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load',
+                                  backgroundImage: AssetImage(
+                                    'images/profile.jpg'
                                   ),
                                 ),
                               ),
