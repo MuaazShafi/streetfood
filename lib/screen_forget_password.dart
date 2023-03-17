@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:streetfood/screen_home.dart';
 
 class ForgetPassword extends StatelessWidget {
   const ForgetPassword({Key? key}) : super(key: key);
@@ -19,6 +20,7 @@ class ForgetPassword extends StatelessWidget {
             //       builder: (context) => SixthPage(),
             //     ),
             //   );
+
             // },
             child: Icon(
               Icons.arrow_back_ios,
@@ -135,7 +137,10 @@ class ForgetPassword extends StatelessWidget {
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => HomeScreen()));
+          },
           child: Icon(
             Icons.arrow_forward,
             color: Colors.black,
