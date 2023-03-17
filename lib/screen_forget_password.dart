@@ -22,9 +22,14 @@ class ForgetPassword extends StatelessWidget {
             //   );
 
             // },
-            child: Icon(
-              Icons.arrow_back_ios,
-              color: Colors.black,
+            child: GestureDetector(
+              onTap: (){
+                Navigator.pop(context);
+              },
+              child: Icon(
+                Icons.arrow_back_ios,
+                color: Colors.black,
+              ),
             ),
           ),
           title: Text(
