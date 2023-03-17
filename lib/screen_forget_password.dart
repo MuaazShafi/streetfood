@@ -60,30 +60,31 @@ class ForgetPassword extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 80),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Text(
-                    'abc@gmail.com',
-                    style: TextStyle(
-                      color: Color(0xff000000),
-                      fontSize: 13,
-                      fontFamily: 'PoppinsMedium',
+              padding: const EdgeInsets.only(top: 80, right: 80, left: 80),
+              child: TextField(
+                obscureText: true,
+                decoration: InputDecoration(
+                  suffixIcon: Icon(Icons.circle,color: Color(0xffD9D9D9),),
+                  contentPadding: EdgeInsets.only(top: 2, left: 10),
+                  hintText: 'abc@gmail.com',
+                  filled: true,
+                  fillColor: Colors.white,
+                  border: InputBorder.none,
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(14)),
+                    borderSide: BorderSide(
+                      width: 2,
+                      color: Color(0xffF7BB0E),
                     ),
                   ),
-                  Container(
-                    height: 11,
-                    width: 11,
-                    decoration: BoxDecoration(
-                      color: Color(0xffD9D9D9),
-                      borderRadius: BorderRadius.circular(20),
-                      border: Border.all(
-                        color: Color(0xffF7BB0E),
-                      ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(14)),
+                    borderSide: BorderSide(
+                      width: 2,
+                      color: Color(0xffF7BB0E),
                     ),
                   ),
-                ],
+                ),
               ),
             ),
             Padding(
