@@ -64,7 +64,7 @@ class LoginScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 20),
                 child: Text(
-                  'I am very happy to see you. you can continue\n to login for latest Racipes',
+                  'I am very happy to see you. you can continue\n to login for latest Recipes',
                   style: TextStyle(
                     color: Color(0xffADAAAA),
                     fontSize: 12,

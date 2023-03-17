@@ -134,6 +134,14 @@ class ForgetPassword extends StatelessWidget {
             ],
           ),
         ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          child: Icon(
+            Icons.arrow_forward,
+            color: Colors.black,
+          ),
+          backgroundColor: Color(0xffF7BB0E),
+        ),
       ),
     );
   }
