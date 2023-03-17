@@ -39,9 +39,14 @@ class NotificationScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          leading: Icon(
-            Icons.arrow_back_ios,
-            color: Color(0xff000000),
+          leading: GestureDetector(
+            onTap: (){
+              Navigator.pop(context);
+            },
+            child: Icon(
+              Icons.arrow_back_ios,
+              color: Color(0xff000000),
+            ),
           ),
           backgroundColor: Color(0xffffffff),
           elevation: 1,

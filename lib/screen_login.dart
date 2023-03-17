@@ -92,6 +92,10 @@ class LoginScreen extends StatelessWidget {
                     decoration: InputDecoration(
                       contentPadding: EdgeInsets.only(top: 2, left: 10),
                       hintText: 'Email Address',
+                      hintStyle: TextStyle(
+                        fontSize: 10,
+                        fontFamily: 'PoppinsMedium',
+                      ),
                       filled: true,
                       fillColor: Colors.white,
                       border: InputBorder.none,
@@ -135,6 +139,10 @@ class LoginScreen extends StatelessWidget {
                       suffixIcon: Icon(Icons.remove_red_eye_outlined),
                       contentPadding: EdgeInsets.only(top: 2, left: 10),
                       hintText: 'Password',
+                      hintStyle: TextStyle(
+                        fontSize: 10,
+                        fontFamily: 'PoppinsMedium',
+                      ),
                       filled: true,
                       fillColor: Colors.white,
                       border: InputBorder.none,
