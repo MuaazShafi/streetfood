@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:streetfood/screen_forget_password.dart';
 import 'package:streetfood/screen_home.dart';
 import 'package:streetfood/screen_signup.dart';
 
@@ -160,12 +161,22 @@ class LoginScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Text(
-                      'Forget Password',
-                      style: TextStyle(
-                        color: Color(0xff969494),
-                        fontSize: 10,
-                        fontFamily: 'PoppinsMedium',
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ForgetPassword(),
+                          ),
+                        );
+                      },
+                      child: Text(
+                        'Forget Password',
+                        style: TextStyle(
+                          color: Color(0xff969494),
+                          fontSize: 10,
+                          fontFamily: 'PoppinsMedium',
+                        ),
                       ),
                     ),
                   ],
