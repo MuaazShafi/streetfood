@@ -20,10 +20,9 @@ class ForgetPassword extends StatelessWidget {
             //       builder: (context) => SixthPage(),
             //     ),
             //   );
-
             // },
             child: GestureDetector(
-              onTap: (){
+              onTap: () {
                 Navigator.pop(context);
               },
               child: Icon(
