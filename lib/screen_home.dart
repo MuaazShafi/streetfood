@@ -40,7 +40,9 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        drawer: Drawer(),
+        drawer: Drawer(
+
+        ),
         body: NestedScrollView(
           headerSliverBuilder: (BuildContext context, bool isScrolled) {
             return [
@@ -60,10 +62,17 @@ class _HomeScreenState extends State<HomeScreen> {
                           Row(
                             children: [
                               Center(
-                                child: CircleAvatar(
-                                  radius: 30,
-                                  backgroundImage: AssetImage(
-                                    'images/profile.jpg'
+                                child: Builder(
+                                  builder: (context)=> GestureDetector(
+                                    onTap: (){
+                                      Scaffold.of(context).openDrawer();
+                                    },
+                                    child: CircleAvatar(
+                                      radius: 30,
+                                      backgroundImage: AssetImage(
+                                          'images/profile.jpg'
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ),
