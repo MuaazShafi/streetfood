@@ -3,6 +3,7 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:streetfood/screen_login.dart';
 import 'package:streetfood/screen_notification.dart';
+import 'package:streetfood/screen_setting.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key? key}) : super(key: key);
@@ -72,36 +73,42 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               Padding(
                 padding: const EdgeInsets.only(right: 50, left: 10, top: 30),
-                child: Material(
-                  borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(10),
-                    bottomRight: Radius.circular(10),
-                  ),
-                  elevation: 2,
-                  child: Container(
-                    height: 32,
-                    width: 228,
-                    child: Row(
-                      children: [
-                        Icon(
-                          Icons.settings,
-                          color: Color(0xffF7BB0E),
-                          size: 20,
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Text('Setting'),
-                        Spacer(),
-                        Padding(
-                          padding: const EdgeInsets.only(right: 15),
-                          child: Icon(
-                            Icons.arrow_forward_ios_sharp,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Setting()));
+                  },
+                  child: Material(
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(10),
+                      bottomRight: Radius.circular(10),
+                    ),
+                    elevation: 2,
+                    child: Container(
+                      height: 32,
+                      width: 228,
+                      child: Row(
+                        children: [
+                          Icon(
+                            Icons.settings,
                             color: Color(0xffF7BB0E),
-                            size: 15,
+                            size: 20,
                           ),
-                        ),
-                      ],
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text('Setting'),
+                          Spacer(),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 15),
+                            child: Icon(
+                              Icons.arrow_forward_ios_sharp,
+                              color: Color(0xffF7BB0E),
+                              size: 15,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
