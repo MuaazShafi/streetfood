@@ -1,6 +1,7 @@
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:streetfood/screen_login.dart';
 import 'package:streetfood/screen_notification.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -41,7 +42,114 @@ class _HomeScreenState extends State<HomeScreen> {
     return SafeArea(
       child: Scaffold(
         drawer: Drawer(
-
+          child: ListView(
+            children: [
+              UserAccountsDrawerHeader(
+                decoration: BoxDecoration(color: Colors.white),
+                currentAccountPicture: CircleAvatar(
+                  backgroundImage: AssetImage('images/profile.jpg'),
+                ),
+                accountName: Text(
+                  "John ",
+                  style: TextStyle(
+                    color: Color(0xff000000),
+                    fontFamily: 'PoppinsMedium',
+                    fontSize: 12,
+                  ),
+                ),
+                accountEmail: Text(
+                  "abc@gmail.com",
+                  style: TextStyle(
+                    color: Color(0xff857F7F),
+                    fontFamily: 'PoppinsRegular',
+                    fontSize: 9,
+                  ),
+                ),
+              ),
+              Divider(
+                thickness: 2,
+                color: Color(0xffD9D9D9),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 50, left: 10, top: 30),
+                child: Material(
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(10),
+                    bottomRight: Radius.circular(10),
+                  ),
+                  elevation: 2,
+                  child: Container(
+                    height: 32,
+                    width: 228,
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.settings,
+                          color: Color(0xffF7BB0E),
+                          size: 20,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text('Setting'),
+                        Spacer(),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 15),
+                          child: Icon(
+                            Icons.arrow_forward_ios_sharp,
+                            color: Color(0xffF7BB0E),
+                            size: 15,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 50, left: 10, top: 10),
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => LoginScreen()));
+                  },
+                  child: Material(
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(10),
+                      bottomRight: Radius.circular(10),
+                    ),
+                    elevation: 2,
+                    child: Container(
+                      height: 32,
+                      width: 228,
+                      child: Row(
+                        children: [
+                          Icon(
+                            Icons.logout,
+                            color: Color(0xffF7BB0E),
+                            size: 20,
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text('Log Out'),
+                          Spacer(),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 15),
+                            child: Icon(
+                              Icons.arrow_forward_ios_sharp,
+                              color: Color(0xffF7BB0E),
+                              size: 15,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
         body: NestedScrollView(
           headerSliverBuilder: (BuildContext context, bool isScrolled) {
@@ -63,15 +171,14 @@ class _HomeScreenState extends State<HomeScreen> {
                             children: [
                               Center(
                                 child: Builder(
-                                  builder: (context)=> GestureDetector(
-                                    onTap: (){
+                                  builder: (context) => GestureDetector(
+                                    onTap: () {
                                       Scaffold.of(context).openDrawer();
                                     },
                                     child: CircleAvatar(
                                       radius: 30,
-                                      backgroundImage: AssetImage(
-                                          'images/profile.jpg'
-                                      ),
+                                      backgroundImage:
+                                          AssetImage('images/profile.jpg'),
                                     ),
                                   ),
                                 ),
@@ -310,17 +417,18 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
                 Padding(
-                    padding: const EdgeInsets.only(left: 20.0),
-                    child: SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          for (var a = 0; a < HomeScreen.imageList.length; a++)
-                            buildCategoryIndicator(HomeScreen.currentIndex == a)
-                        ],
-                      ),
-                    )),
+                  padding: const EdgeInsets.only(left: 20.0),
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        for (var a = 0; a < HomeScreen.imageList.length; a++)
+                          buildCategoryIndicator(HomeScreen.currentIndex == a)
+                      ],
+                    ),
+                  ),
+                ),
                 Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: GridView.builder(
@@ -487,13 +595,13 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget buildIndicator(bool isSelected) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 1),
+      padding: const EdgeInsets.symmetric(horizontal: 4),
       child: Container(
         height: isSelected ? 12 : 10,
         width: isSelected ? 12 : 10,
         decoration: BoxDecoration(
           shape: BoxShape.circle,
-          color: isSelected ? Colors.black : Colors.grey,
+          color: isSelected ? Color(0xffF7BB0E) : Color(0xffD9D9D9),
         ),
       ),
     );
@@ -518,34 +626,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-
-/*
-* Container(
-                    height: 29,
-                    width: double.maxFinite,
-                    child: ListView.separated(
-                      scrollDirection: Axis.horizontal,
-                      itemBuilder: (context, indexIndicator) => Container(
-                        height: 153,
-                        width: 90,
-                        decoration: BoxDecoration(
-                          color: Color(0xffF7BB0E),
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(7),
-                          ),
-                        ),
-                        child: Center(
-                          child: Text(
-                            'All',
-                            style: TextStyle(
-                              color: Color(0xffFFFFFF),
-                              fontFamily: 'PoppinsSemiBold',
-                              fontSize: 15,
-                            ),
-                          ),
-                        ),
-                      ),
-                      separatorBuilder: (context, i) => SizedBox(width: 15),
-                      itemCount: 7,
-                    ),
-                  )*/
