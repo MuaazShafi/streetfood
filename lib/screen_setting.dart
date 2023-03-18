@@ -20,9 +20,14 @@ class Setting extends StatelessWidget {
           centerTitle: true,
           elevation: 0,
           backgroundColor: Colors.white,
-          leading: Icon(
-            Icons.arrow_back_ios,
-            color: Colors.black,
+          leading: GestureDetector(
+            onTap: (){
+              Navigator.pop(context);
+            },
+            child: Icon(
+              Icons.arrow_back_ios,
+              color: Colors.black,
+            ),
           ),
         ),
         body: Center(
@@ -43,7 +48,7 @@ class Setting extends StatelessWidget {
                   elevation: 1.5,
                   child: Container(
                     height: 42,
-                    width: 228,
+                    width: 272,
                     child: Padding(
                       padding: const EdgeInsets.only(left: 20, right: 15),
                       child: Row(

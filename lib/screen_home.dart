@@ -8,7 +8,8 @@ import 'package:streetfood/screen_setting.dart';
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key? key}) : super(key: key);
 
-  static var currentIndex = 0;
+  static var currentIndexIndicator = 0;
+  static var currentIndexCategory = 0;
   static var bottomBarCurrentIndex = 0;
 
   static const List<String> imageList = [
@@ -295,7 +296,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: PageView.builder(
                     onPageChanged: (index) {
                       setState(() {
-                        HomeScreen.currentIndex =
+                        HomeScreen.currentIndexIndicator =
                             index % HomeScreen.imageList.length;
                       });
                     },
@@ -395,7 +396,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     for (var a = 0; a < HomeScreen.imageList.length; a++)
-                      buildIndicator(HomeScreen.currentIndex == a)
+                      buildIndicator(HomeScreen.currentIndexIndicator == a)
                   ],
                 ),
                 Padding(
@@ -430,8 +431,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        for (var a = 0; a < HomeScreen.imageList.length; a++)
-                          buildCategoryIndicator(HomeScreen.currentIndex == a)
+                        for (var b = 0; b < HomeScreen.imageList.length; b++)
+                          buildCategoryIndicator(
+                              HomeScreen.currentIndexCategory == b)
                       ],
                     ),
                   ),
@@ -614,14 +616,14 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  Widget buildCategoryIndicator(bool isSelected) {
+  Widget buildCategoryIndicator(bool isSelected1) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 1),
       child: Container(
         height: 29,
         width: 90,
         decoration: BoxDecoration(
-          color: isSelected ? Color(0xffF7BB0E) : Colors.white,
+          color: isSelected1 ? Color(0xffF7BB0E) : Colors.white,
           borderRadius: BorderRadius.circular(07),
           border: Border.all(
             width: 1.5,
