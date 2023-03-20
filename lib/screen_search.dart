@@ -37,6 +37,7 @@ class SearchScreen extends StatelessWidget {
           padding: const EdgeInsets.only(top: 20.0),
           child: Center(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Material(
                   borderRadius: BorderRadius.all(
@@ -47,30 +48,43 @@ class SearchScreen extends StatelessWidget {
                   child: SizedBox(
                     height: 41,
                     width: 317,
-                    child: TextField(
-                      decoration: InputDecoration(
-                        prefixIcon: Icon(
-                          Icons.search,
-                          color: Colors.black,
-                        ),
-                        hintText: 'Search Recipe here',
-                        border: InputBorder.none,
-                        suffix: Container(
-                          height: 30,
-                          width: 30,
-                          decoration: BoxDecoration(
-                            color: Color(0xffF7BB0E),
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          child: Center(
-                            child: ImageIcon(
-                              AssetImage('images/sliderIcon.png'),
-                              size: 20,
-                              color: Colors.white,
+                    child: Row(
+                      children: [
+                        Expanded(
+                          flex: 7,
+                          child: TextField(
+                            decoration: InputDecoration(
+                              contentPadding: EdgeInsets.all(8),
+                              prefixIcon: Icon(
+                                Icons.search,
+                                color: Colors.black,
+                              ),
+                              hintText: 'Search Recipe here',
+                              border: InputBorder.none,
                             ),
                           ),
                         ),
-                      ),
+                        Expanded(
+                          flex: 1,
+                          child: Padding(
+                            padding: const EdgeInsets.only(right: 10),
+                            child: Container(
+                              height: 30,
+                              width: 20,
+                              decoration: BoxDecoration(
+                                  color: Color(0xffF7BB0E),
+                                  borderRadius: BorderRadius.circular(8)),
+                              child: Center(
+                                child: ImageIcon(
+                                  AssetImage('images/sliderIcon.png'),
+                                  color: Colors.white,
+                                  size: 20,
+                                ),
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
                     ),
                   ),
                 ),
