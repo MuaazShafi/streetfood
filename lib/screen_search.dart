@@ -53,6 +53,8 @@ class SearchScreen extends StatelessWidget {
                           Icons.search,
                           color: Colors.black,
                         ),
+                        hintText: 'Search Recipe here',
+                        border: InputBorder.none,
                         suffix: Container(
                           height: 30,
                           width: 30,
