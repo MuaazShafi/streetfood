@@ -7,13 +7,19 @@ class SecondScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
+
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
         body: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 8.0, right: 8.0),
+              padding: EdgeInsets.only(
+                top: screenHeight * 0.01,
+                right: screenWidth * 0.02,
+              ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
@@ -30,7 +36,7 @@ class SecondScreen extends StatelessWidget {
                       'Skip',
                       style: TextStyle(
                         color: Color(0xff999999),
-                        fontSize: 15,
+                        fontSize: screenWidth * 0.04,
                         fontFamily: 'PoppinsMedium',
                       ),
                     ),
@@ -39,38 +45,38 @@ class SecondScreen extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 100),
+              padding: EdgeInsets.only(top: screenHeight * 0.1),
               child: Image(
                 image: AssetImage('images/second.png'),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 50),
+              padding: EdgeInsets.only(top: screenHeight * 0.05),
               child: Text(
                 'Get the exact nutrition',
                 style: TextStyle(
                   color: Color(0xff000000),
                   fontFamily: 'PoppinsMedium',
-                  fontSize: 19,
+                  fontSize: screenWidth * 0.06,
                 ),
               ),
             ),
             Text(
-              'values of every thing you eat',
+              'values of everything you eat',
               style: TextStyle(
                 color: Color(0xff000000),
                 fontFamily: 'PoppinsMedium',
-                fontSize: 19,
+                fontSize: screenWidth * 0.06,
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 20),
+              padding: EdgeInsets.only(top: screenHeight * 0.02),
               child: Text(
                 'we are updating our food database every',
                 style: TextStyle(
                   color: Color(0xffACACAC),
                   fontFamily: 'PoppinsRegular',
-                  fontSize: 15,
+                  fontSize: screenWidth * 0.04,
                 ),
               ),
             ),
@@ -79,11 +85,11 @@ class SecondScreen extends StatelessWidget {
               style: TextStyle(
                 color: Color(0xffACACAC),
                 fontFamily: 'PoppinsRegular',
-                fontSize: 15,
+                fontSize: screenWidth * 0.04,
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 50),
+              padding: EdgeInsets.only(top: screenHeight * 0.05),
               child: FloatingActionButton(
                 backgroundColor: Color(0xffF7BB0E),
                 onPressed: () {

@@ -409,7 +409,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         style: TextStyle(
                           color: Color(0xff000000),
                           fontFamily: 'PoppinsSemiBold',
-                          fontSize: 15,
+                          fontSize: 15
                         ),
                       ),
                       Spacer(),

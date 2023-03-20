@@ -6,25 +6,28 @@ class ThirdScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double screenHeight = MediaQuery.of(context).size.height;
+    final double screenWidth = MediaQuery.of(context).size.width;
+
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
         body: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 100),
+              padding: EdgeInsets.only(top: screenHeight * 0.1),
               child: Image(
                 image: AssetImage('images/first.png'),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 50),
+              padding: EdgeInsets.only(top: screenHeight * 0.05),
               child: Text(
                 'Get daily calorie target',
                 style: TextStyle(
                   color: Color(0xff000000),
                   fontFamily: 'PoppinsMedium',
-                  fontSize: 19,
+                  fontSize: screenWidth * 0.05,
                 ),
               ),
             ),
@@ -33,17 +36,17 @@ class ThirdScreen extends StatelessWidget {
               style: TextStyle(
                 color: Color(0xff000000),
                 fontFamily: 'PoppinsMedium',
-                fontSize: 19,
+                fontSize: screenWidth * 0.05,
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 20),
+              padding: EdgeInsets.only(top: screenHeight * 0.02),
               child: Text(
                 'Set your target weight and select your',
                 style: TextStyle(
                   color: Color(0xffACACAC),
                   fontFamily: 'PoppinsRegular',
-                  fontSize: 15,
+                  fontSize: screenWidth * 0.04,
                 ),
               ),
             ),
@@ -52,11 +55,11 @@ class ThirdScreen extends StatelessWidget {
               style: TextStyle(
                 color: Color(0xffACACAC),
                 fontFamily: 'PoppinsRegular',
-                fontSize: 15,
+                fontSize: screenWidth * 0.04,
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 50),
+              padding: EdgeInsets.only(top: screenHeight * 0.05),
               child: GestureDetector(
                 onTap: () {
                   Navigator.push(
@@ -67,8 +70,8 @@ class ThirdScreen extends StatelessWidget {
                   );
                 },
                 child: Container(
-                  height: 36,
-                  width: 148,
+                  height: screenHeight * 0.05,
+                  width: screenWidth * 0.4,
                   decoration: BoxDecoration(
                     color: Color(0xffF7BB0E),
                     borderRadius: BorderRadius.circular(29),
@@ -78,7 +81,7 @@ class ThirdScreen extends StatelessWidget {
                       'GET STARTED',
                       style: TextStyle(
                         color: Color(0xff000000),
-                        fontSize: 15,
+                        fontSize: screenWidth * 0.05,
                         fontFamily: 'PoppinsSemiBold',
                       ),
                     ),

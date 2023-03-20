@@ -7,6 +7,14 @@ class FirstScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Size screenSize = MediaQuery.of(context).size;
+    final double screenWidth = screenSize.width;
+    final double screenHeight = screenSize.height;
+    final double skipButtonFontSize = screenWidth * 0.035;
+    final double headerFontSize = screenWidth * 0.065;
+    final double subHeaderFontSize = screenWidth * 0.045;
+    final double descriptionFontSize = screenWidth * 0.04;
+
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
@@ -14,7 +22,10 @@ class FirstScreen extends StatelessWidget {
           child: Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(top: 8.0, right: 8.0),
+                padding: EdgeInsets.only(
+                  top: screenHeight * 0.01,
+                  right: screenWidth * 0.02,
+                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
@@ -31,7 +42,7 @@ class FirstScreen extends StatelessWidget {
                         'Skip',
                         style: TextStyle(
                           color: Color(0xff999999),
-                          fontSize: 15,
+                          fontSize: skipButtonFontSize,
                           fontFamily: 'PoppinsMedium',
                         ),
                       ),
@@ -40,19 +51,19 @@ class FirstScreen extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 50),
+                padding: EdgeInsets.only(top: screenHeight * 0.05),
                 child: Image(
                   image: AssetImage('images/third.png'),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 50),
+                padding: EdgeInsets.only(top: screenHeight * 0.05),
                 child: Text(
                   'Get all the healthy recipes',
                   style: TextStyle(
                     color: Color(0xff000000),
                     fontFamily: 'PoppinsMedium',
-                    fontSize: 19,
+                    fontSize: headerFontSize,
                   ),
                 ),
               ),
@@ -61,17 +72,17 @@ class FirstScreen extends StatelessWidget {
                 style: TextStyle(
                   color: Color(0xff000000),
                   fontFamily: 'PoppinsMedium',
-                  fontSize: 19,
+                  fontSize: headerFontSize,
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 20),
+                padding: EdgeInsets.only(top: screenHeight * 0.02),
                 child: Text(
                   'whether you are losing or gaining. we',
                   style: TextStyle(
                     color: Color(0xffACACAC),
                     fontFamily: 'PoppinsRegular',
-                    fontSize: 15,
+                    fontSize: subHeaderFontSize,
                   ),
                 ),
               ),
@@ -80,11 +91,11 @@ class FirstScreen extends StatelessWidget {
                 style: TextStyle(
                   color: Color(0xffACACAC),
                   fontFamily: 'PoppinsRegular',
-                  fontSize: 15,
+                  fontSize: subHeaderFontSize,
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 50),
+                padding: EdgeInsets.only(top: screenHeight * 0.05),
                 child: FloatingActionButton(
                   backgroundColor: Color(0xffF7BB0E),
                   onPressed: () {
