@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(SearchScreen());
@@ -33,14 +34,48 @@ class SearchScreen extends StatelessWidget {
           ),
           centerTitle: true,
         ),
-        body: Column(
-          children: [
-            SizedBox(
-              height: 41,
-              width: 317,
-              child: TextField(),
+        body: Padding(
+          padding: const EdgeInsets.only(top: 20.0),
+          child: Center(
+            child: Column(
+              children: [
+                Material(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(14),
+                  ),
+                  shadowColor: Colors.black,
+                  elevation: 1,
+                  child: SizedBox(
+                    height: 41,
+                    width: 317,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        prefixIcon: Icon(
+                          Icons.search,
+                          color: Colors.black,
+                        ),
+                        suffix: Container(
+                          height: 30,
+                          width: 30,
+                          decoration: BoxDecoration(
+                            color: Color(0xffF7BB0E),
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Center(
+                            child: ImageIcon(
+                              AssetImage('images/sliderIcon.png'),
+                              size: 20,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );
