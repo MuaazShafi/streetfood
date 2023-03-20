@@ -72,8 +72,9 @@ class SearchScreen extends StatelessWidget {
                               height: 30,
                               width: 20,
                               decoration: BoxDecoration(
-                                  color: Color(0xffF7BB0E),
-                                  borderRadius: BorderRadius.circular(8)),
+                                color: Color(0xffF7BB0E),
+                                borderRadius: BorderRadius.circular(8),
+                              ),
                               child: Center(
                                 child: ImageIcon(
                                   AssetImage('images/sliderIcon.png'),
