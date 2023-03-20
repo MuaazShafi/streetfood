@@ -3,6 +3,7 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:streetfood/screen_login.dart';
 import 'package:streetfood/screen_notification.dart';
+import 'package:streetfood/screen_search.dart';
 import 'package:streetfood/screen_setting.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -258,9 +259,22 @@ class _HomeScreenState extends State<HomeScreen> {
                                   Radius.circular(5),
                                 ),
                               ),
-                              child: Icon(
-                                Icons.search,
-                                color: Color(0xffffffff),
+                              child: GestureDetector(
+                                onTap: () {},
+                                child: GestureDetector(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => SearchScreen(),
+                                      ),
+                                    );
+                                  },
+                                  child: Icon(
+                                    Icons.search,
+                                    color: Color(0xffffffff),
+                                  ),
+                                ),
                               ),
                             ),
                           ),

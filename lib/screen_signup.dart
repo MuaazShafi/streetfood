@@ -161,7 +161,7 @@ class SignupScreen extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(right: 180, top: 15),
+                padding: const EdgeInsets.only(right: 200, top: 15),
                 child: Text(
                   'Password',
                   style: TextStyle(
@@ -208,7 +208,7 @@ class SignupScreen extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(right: 150, top: 15),
+                padding: const EdgeInsets.only(right: 140, top: 15),
                 child: Text(
                   'Confirm Password',
                   style: TextStyle(
