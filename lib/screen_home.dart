@@ -499,57 +499,69 @@ class _HomeScreenState extends State<HomeScreen> {
                             Spacer(),
                             Align(
                               alignment: Alignment.bottomLeft,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                              child: Stack(
                                 children: [
-                                  Text(
-                                    'Chilli Biryani',
-                                    style: TextStyle(
-                                      color: Color(0xffFFFFFF),
-                                      fontFamily: 'PoppinsSemiBold',
-                                      fontSize: 13,
+                                  Container(
+                                    height: 50,
+                                    width: 150,
+                                    decoration: BoxDecoration(
+                                      color: Colors.black.withOpacity(0.7),
+                                      borderRadius: BorderRadius.circular(5),
                                     ),
                                   ),
-                                  Text(
-                                    'by John Jones',
-                                    style: TextStyle(
-                                      color: Color(0xffCACACA),
-                                      fontFamily: 'PoppinsRegular',
-                                      fontSize: 9,
-                                    ),
-                                  ),
-                                  Row(
+                                  Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
-                                      RatingBar.builder(
-                                        initialRating: 3.5,
-                                        minRating: 1,
-                                        direction: Axis.horizontal,
-                                        allowHalfRating: true,
-                                        itemSize: 11,
-                                        itemCount: 5,
-                                        itemPadding: EdgeInsets.symmetric(
-                                            horizontal: 1.0),
-                                        itemBuilder: (context, _) => Icon(
-                                          Icons.star,
-                                          color: Colors.amber,
-                                        ),
-                                        onRatingUpdate: (rating) {
-                                          print(rating);
-                                        },
-                                      ),
-                                      Spacer(),
-                                      Icon(
-                                        Icons.access_time,
-                                        color: Colors.white,
-                                        size: 10,
-                                      ),
                                       Text(
-                                        '30 min',
+                                        'Chilli Biryani',
                                         style: TextStyle(
                                           color: Color(0xffFFFFFF),
-                                          fontSize: 8,
-                                          fontFamily: 'PoppinsRegular',
+                                          fontFamily: 'PoppinsSemiBold',
+                                          fontSize: 13,
                                         ),
+                                      ),
+                                      Text(
+                                        'by John Jones',
+                                        style: TextStyle(
+                                          color: Color(0xffCACACA),
+                                          fontFamily: 'PoppinsRegular',
+                                          fontSize: 9,
+                                        ),
+                                      ),
+                                      Row(
+                                        children: [
+                                          RatingBar.builder(
+                                            initialRating: 3.5,
+                                            minRating: 1,
+                                            direction: Axis.horizontal,
+                                            allowHalfRating: true,
+                                            itemSize: 11,
+                                            itemCount: 5,
+                                            itemPadding: EdgeInsets.symmetric(
+                                                horizontal: 1.0),
+                                            itemBuilder: (context, _) => Icon(
+                                              Icons.star,
+                                              color: Colors.amber,
+                                            ),
+                                            onRatingUpdate: (rating) {
+                                              print(rating);
+                                            },
+                                          ),
+                                          Spacer(),
+                                          Icon(
+                                            Icons.access_time,
+                                            color: Colors.white,
+                                            size: 10,
+                                          ),
+                                          Text(
+                                            '30 min',
+                                            style: TextStyle(
+                                              color: Color(0xffFFFFFF),
+                                              fontSize: 8,
+                                              fontFamily: 'PoppinsRegular',
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                     ],
                                   ),
