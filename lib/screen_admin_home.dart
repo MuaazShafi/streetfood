@@ -187,28 +187,32 @@ class AdminHomeScreen extends StatelessWidget {
                           ],
                         ),
                       ),
-                      Container(
-                        height: 144,
-                        width: 127,
-                        decoration: BoxDecoration(
-                          color: Color(0xffFFFFFF),
-                          borderRadius: BorderRadius.circular(14),
-                        ),
-                        child: Column(
-                          children: [
-                            Icon(
-                              Icons.remove_red_eye_outlined,
-                              size: 100,
-                              color: Color(0xffF7BB0E),
-                            ),
-                            Text(
-                              'View own Recipe',
-                              style: TextStyle(
-                                fontSize: 12,
-                                fontFamily: 'PoppinsMedium',
+                      Material(
+                        elevation: 1.5,
+                        borderRadius: BorderRadius.circular(14),
+                        child: Container(
+                          height: 144,
+                          width: 127,
+                          decoration: BoxDecoration(
+                            color: Color(0xffFFFFFF),
+                            borderRadius: BorderRadius.circular(14),
+                          ),
+                          child: Column(
+                            children: [
+                              Icon(
+                                Icons.remove_red_eye_outlined,
+                                size: 100,
+                                color: Color(0xffF7BB0E),
                               ),
-                            ),
-                          ],
+                              Text(
+                                'View own Recipe',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontFamily: 'PoppinsMedium',
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ],
