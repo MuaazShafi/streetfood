@@ -20,11 +20,16 @@ class FavouriteScreen extends StatelessWidget {
   ];
 
   static const List<String> BBQImages = [
-    'images/mutton.jpg',
-    'images/chicken.jpg',
-    'images/soup.jpg',
-    'images/slices.jpg',
-    'images/burger.jpg',
+    'images/chicken wings.jpg',
+    'images/kabab petty.jpg',
+    'images/nuggets.jpg',
+    'images/tikka.jpg',
+  ];
+  static const List<String> BBQImagesName =[
+    'chicken wings',
+    'kabab petty',
+    'nuggets',
+    'Strawberry French Cake',
   ];
   static const List<String> fastFoodImages = [
     'images/mutton.jpg',
@@ -224,7 +229,7 @@ class FavouriteScreen extends StatelessWidget {
                         image: DecorationImage(
                           fit: BoxFit.fill,
                           image: AssetImage(
-                            FavouriteScreen.desertsImages[i],
+                            FavouriteScreen.BBQImages[i],
                           ),
                         ),
                         borderRadius: BorderRadius.all(
@@ -268,7 +273,7 @@ class FavouriteScreen extends StatelessWidget {
                                     crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        'Chilli Biryani',
+                                        BBQImagesName[i],
                                         style: TextStyle(
                                           color: Color(0xffFFFFFF),
                                           fontFamily: 'PoppinsSemiBold',
@@ -330,7 +335,7 @@ class FavouriteScreen extends StatelessWidget {
                     separatorBuilder: (context, i) => SizedBox(
                       width: 10,
                     ),
-                    itemCount: 5,
+                    itemCount: BBQImages.length,
                   ),
                 ),
                 Divider(

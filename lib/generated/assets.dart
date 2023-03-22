@@ -10,13 +10,17 @@ class Assets {
   static const String imagesChacha1 = 'images/chacha1.jpg';
   static const String imagesChachi = 'images/chachi.jpg';
   static const String imagesChicken = 'images/chicken.jpg';
+  static const String imagesChicken wings = 'images/chicken wings.jpg';
   static const String imagesEye.icon = 'images/eye.icon.png';
   static const String imagesFP = 'images/fP.png';
   static const String imagesFirst = 'images/first.png';
   static const String imagesGoogle = 'images/google.png';
+  static const String imagesKabab = 'images/kabab.webp';
+  static const String imagesKabab petty = 'images/kabab petty.jpg';
   static const String imagesLogo = 'images/logo.png';
   static const String imagesMutton = 'images/mutton.jpg';
   static const String imagesNotification.icon = 'images/notification.icon.png';
+  static const String imagesNuggets = 'images/nuggets.jpg';
   static const String imagesOliveoilSponchCake = 'images/oliveoil_sponch_cake.jpg';
   static const String imagesProfile = 'images/profile.jpg';
   static const String imagesPumpkinSpiceCakeRoll = 'images/Pumpkin-Spice-Cake-Roll.jpg';
@@ -27,6 +31,7 @@ class Assets {
   static const String imagesSoup = 'images/soup.jpg';
   static const String imagesStrawberryFrechCake = 'images/Strawberry-Frech-Cake.jpg';
   static const String imagesThird = 'images/third.png';
+  static const String imagesTikka = 'images/tikka.jpg';
   static const String imagesUpload.icon = 'images/upload.icon.png';
   static const String imagesVanillaCardamomKulfi = 'images/Vanilla-Cardamom-Kulfi.jpg';
   static const String imagesView.icon = 'images/view.icon.png';
