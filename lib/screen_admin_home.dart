@@ -50,27 +50,33 @@ class AdminHomeScreen extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Container(
-                        height: 144,
-                        width: 127,
-                        decoration: BoxDecoration(
-                          color: Color(0xffFFFFFF),
-                          borderRadius: BorderRadius.circular(14),
-                        ),
-                        child: Column(
-                          children: [
-                            Image(
-                              image: AssetImage('images/notification.icon.png'),
-                              fit: BoxFit.cover,
-                            ),
-                            Text(
-                              'Send Notification',
-                              style: TextStyle(
-                                fontSize: 12,
-                                fontFamily: 'PoppinsMedium',
+                      Material(
+                        elevation: 1.5,
+                        borderRadius: BorderRadius.circular(14),
+                        child: Container(
+                          height: 144,
+                          width: 127,
+                          decoration: BoxDecoration(
+                            color: Color(0xffFFFFFF),
+                            borderRadius: BorderRadius.circular(14),
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              ImageIcon(
+                                AssetImage('images/notification.icon.png'),
+                                color: Color(0xffF7BB0E),
+                                size: 60,
                               ),
-                            ),
-                          ],
+                              Text(
+                                'Send Notification',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontFamily: 'PoppinsMedium',
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                       Container(
