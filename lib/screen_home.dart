@@ -163,8 +163,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: const EdgeInsets.only(right: 50, left: 10, top: 10),
                 child: GestureDetector(
                   onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => AdminHomeScreen()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => AdminHomeScreen()));
                   },
                   child: Material(
                     borderRadius: BorderRadius.only(
@@ -205,8 +207,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: const EdgeInsets.only(right: 50, left: 10, top: 10),
                 child: GestureDetector(
                   onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => FavouriteScreen()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => FavouriteScreen()));
                   },
                   child: Material(
                     borderRadius: BorderRadius.only(
@@ -507,10 +511,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       Text(
                         'Categories',
                         style: TextStyle(
-                          color: Color(0xff000000),
-                          fontFamily: 'PoppinsSemiBold',
-                          fontSize: 15
-                        ),
+                            color: Color(0xff000000),
+                            fontFamily: 'PoppinsSemiBold',
+                            fontSize: 15),
                       ),
                       Spacer(),
                       Icon(
@@ -596,7 +599,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ),
                                   ),
                                   Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Text(
                                         'Chilli Biryani',
