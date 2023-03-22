@@ -203,7 +203,7 @@ class FavouriteScreen extends StatelessWidget {
                   thickness: 2,
                 ),
                 Text(
-                  "Desserts",
+                  "BBQ",
                   style: TextStyle(
                     color: Colors.black,
                     fontFamily: 'PoppinsSemiBold',
