@@ -19,5 +19,6 @@ class Assets {
   static const String imagesSliderIcon = 'images/sliderIcon.png';
   static const String imagesSoup = 'images/soup.jpg';
   static const String imagesThird = 'images/third.png';
+  static const String imagesWHITE 1 = 'images/WHITE 1.png';
 
 }
