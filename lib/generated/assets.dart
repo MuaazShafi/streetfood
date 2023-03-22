@@ -3,22 +3,28 @@ class Assets {
   Assets._();
 
   static const String imagesAndha = 'images/andha.jpg';
+  static const String imagesApproveicon = 'images/approveicon.png';
   static const String imagesBachaOfChahca = 'images/bachaOfChahca.jpg';
+  static const String imagesBlocked.icon = 'images/blocked.icon.png';
   static const String imagesBurger = 'images/burger.jpg';
   static const String imagesChacha1 = 'images/chacha1.jpg';
   static const String imagesChachi = 'images/chachi.jpg';
   static const String imagesChicken = 'images/chicken.jpg';
+  static const String imagesEye.icon = 'images/eye.icon.png';
   static const String imagesFP = 'images/fP.png';
   static const String imagesFirst = 'images/first.png';
   static const String imagesGoogle = 'images/google.png';
   static const String imagesLogo = 'images/logo.png';
   static const String imagesMutton = 'images/mutton.jpg';
+  static const String imagesNotification.icon = 'images/notification.icon.png';
   static const String imagesProfile = 'images/profile.jpg';
   static const String imagesSecond = 'images/second.png';
   static const String imagesSlices = 'images/slices.jpg';
   static const String imagesSliderIcon = 'images/sliderIcon.png';
   static const String imagesSoup = 'images/soup.jpg';
   static const String imagesThird = 'images/third.png';
+  static const String imagesUpload.icon = 'images/upload.icon.png';
+  static const String imagesView.icon = 'images/view.icon.png';
   static const String imagesWHITE 1 = 'images/WHITE 1.png';
 
 }

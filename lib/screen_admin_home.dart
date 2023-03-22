@@ -59,10 +59,9 @@ class AdminHomeScreen extends StatelessWidget {
                         ),
                         child: Column(
                           children: [
-                            Icon(
-                              Icons.notifications_none_outlined,
-                              size: 100,
-                              color: Color(0xffF7BB0E),
+                            Image(
+                              image: AssetImage('images/notification.icon.png'),
+                              fit: BoxFit.cover,
                             ),
                             Text(
                               'Send Notification',
